@@ -1,3 +1,5 @@
+package ArraysAndHashing.Easy;
+
 import java.util.HashMap;
 
 class TwoSum {
