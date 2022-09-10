@@ -8,13 +8,13 @@ public class ValidAnagram {
     public void testValidAnagram() {
 
         boolean result1 = this.isAnagram("anagram", "nagaram");
-        System.out.println("result1 = " + result1);
+        assert result1;
 
         boolean result2 = this.isAnagram("rat", "car");
-        System.out.println("result2 = " + result2);
+        assert !result2;
 
         boolean result3 = this.isAnagram("", "");
-        System.out.println("result3 = " + result3);
+        assert result3;
     }
 
     public boolean isAnagram(String s, String t) {
