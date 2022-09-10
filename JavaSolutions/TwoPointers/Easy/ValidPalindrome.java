@@ -1,17 +1,18 @@
-package TwoPointers;
+package TwoPointers.Easy;
 
 public class ValidPalindrome {
+
 
     public void testValidPalindrome() {
 
         boolean result1 = this.isPalindrome("A man, a plan, a canal: Panama");
-        System.out.println("result1 = " + result1);
+        assert result1;
 
         boolean result2 = this.isPalindrome("race a car");
-        System.out.println("result2 = " + result2);
+        assert !result2;
 
-        boolean result3 = this.isPalindrome("");
-        System.out.println("result3 = " + result3);
+        boolean result3 = this.isPalindrome(" ");
+        assert result3;
 
     }
 
@@ -23,33 +24,29 @@ public class ValidPalindrome {
         char rightChar;
 
         while (leftIndex <= rightIndex) {
+
             leftChar = s.charAt(leftIndex);
-            System.out.println("leftChar = " + leftChar);
             rightChar = s.charAt(rightIndex);
-            System.out.println("rightChar = " + rightChar);
 
             if(!Character.isLetterOrDigit(leftChar)) {
-                System.out.println("left char: " + leftChar + " is not letter or digit. skipping");
                 leftIndex++;
                 continue;
             }
 
             if(!Character.isLetterOrDigit(rightChar)) {
-                System.out.println("right char: " + rightChar + " is not letter or digit. skipping");
                 rightIndex--;
                 continue;
             }
 
             if(Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
-                System.out.println("left char: " + leftChar + " does not equal right char: " + rightChar);
                 return  false;
             }
 
             leftIndex ++;
             rightIndex--;
+
         }
 
-        System.out.println("String is anagram. returning true");
         return true;
     }
 }
