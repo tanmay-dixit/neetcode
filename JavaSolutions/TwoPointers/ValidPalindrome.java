@@ -16,12 +16,11 @@ public class ValidPalindrome {
     }
 
     public boolean isPalindrome(String s) {
-        s = s.toLowerCase();
 
         int leftIndex = 0;
         int rightIndex = s.length()-1;
-        Character leftChar;
-        Character rightChar;
+        char leftChar;
+        char rightChar;
 
         while (leftIndex <= rightIndex) {
             leftChar = s.charAt(leftIndex);
@@ -41,7 +40,7 @@ public class ValidPalindrome {
                 continue;
             }
 
-            if(!leftChar.equals(rightChar)) {
+            if(Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
                 System.out.println("left char: " + leftChar + " does not equal right char: " + rightChar);
                 return  false;
             }
