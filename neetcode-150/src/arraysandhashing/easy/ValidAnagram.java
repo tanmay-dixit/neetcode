@@ -1,4 +1,4 @@
-package ArraysAndHashing.Easy;
+package arraysandhashing.easy;
 
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -19,7 +19,7 @@ public class ValidAnagram {
 
     public boolean isAnagram(String s, String t) {
 
-        if(s.length() != t.length()) {
+        if (s.length() != t.length()) {
             return false;
         }
 
@@ -27,7 +27,7 @@ public class ValidAnagram {
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-        for(Character c: t.toCharArray()) {
+        for (Character c : t.toCharArray()) {
             frequencyByChar.computeIfPresent(c, (character, frequency) -> frequency - 1);
         }
 

@@ -1,7 +1,6 @@
-package TwoPointers.Easy;
+package twopointers.easy;
 
 public class ValidPalindrome {
-
 
     public void testValidPalindrome() {
 
@@ -19,7 +18,7 @@ public class ValidPalindrome {
     public boolean isPalindrome(String s) {
 
         int leftIndex = 0;
-        int rightIndex = s.length()-1;
+        int rightIndex = s.length() - 1;
         char leftChar;
         char rightChar;
 
@@ -28,21 +27,21 @@ public class ValidPalindrome {
             leftChar = s.charAt(leftIndex);
             rightChar = s.charAt(rightIndex);
 
-            if(!Character.isLetterOrDigit(leftChar)) {
+            if (!Character.isLetterOrDigit(leftChar)) {
                 leftIndex++;
                 continue;
             }
 
-            if(!Character.isLetterOrDigit(rightChar)) {
+            if (!Character.isLetterOrDigit(rightChar)) {
                 rightIndex--;
                 continue;
             }
 
-            if(Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
-                return  false;
+            if (Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
+                return false;
             }
 
-            leftIndex ++;
+            leftIndex++;
             rightIndex--;
 
         }

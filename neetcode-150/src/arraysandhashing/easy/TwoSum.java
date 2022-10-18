@@ -1,4 +1,4 @@
-package ArraysAndHashing.Easy;
+package arraysandhashing.easy;
 
 import java.util.HashMap;
 
@@ -11,27 +11,27 @@ class TwoSum {
         int missingNumIndex;
         var indexByNum = new HashMap<Integer, Integer>();
 
-        for(int currentNumIndex=0; currentNumIndex<nums.length; currentNumIndex++) {
+        for (int currentNumIndex = 0; currentNumIndex < nums.length; currentNumIndex++) {
             currentNum = nums[currentNumIndex];
             indexByNum.put(currentNum, currentNumIndex);
         }
 
-        for(int currentNumIndex=0; currentNumIndex<nums.length; currentNumIndex++) {
+        for (int currentNumIndex = 0; currentNumIndex < nums.length; currentNumIndex++) {
 
             currentNum = nums[currentNumIndex];
             missingNum = target - currentNum;
 
-            if(indexByNum.containsKey(missingNum)) {
+            if (indexByNum.containsKey(missingNum)) {
                 missingNumIndex = indexByNum.get(missingNum);
-                if(currentNumIndex != missingNumIndex) {
-                    return new int[] { currentNumIndex , missingNumIndex };
+                if (currentNumIndex != missingNumIndex) {
+                    return new int[] { currentNumIndex, missingNumIndex };
                 }
 
             }
 
         }
 
-        return new int[] {-1, -1};
+        return new int[] { -1, -1 };
 
     }
 

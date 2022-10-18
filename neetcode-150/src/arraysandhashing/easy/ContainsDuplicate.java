@@ -1,4 +1,4 @@
-package ArraysAndHashing.Easy;
+package arraysandhashing.easy;
 
 import java.util.HashSet;
 
@@ -8,8 +8,8 @@ public class ContainsDuplicate {
 
         var uniqueNumbers = new HashSet<Integer>();
 
-        for(int currentNumber: nums) {
-            if(uniqueNumbers.contains(currentNumber)) {
+        for (int currentNumber : nums) {
+            if (uniqueNumbers.contains(currentNumber)) {
                 return true;
             } else {
                 uniqueNumbers.add(currentNumber);
