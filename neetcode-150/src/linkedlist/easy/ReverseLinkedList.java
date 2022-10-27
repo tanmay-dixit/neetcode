@@ -4,7 +4,7 @@ import linkedlist.ListNode;
 
 /*
  * Use 3 consecutive pointers N1 N2 N3
- * Set N2.Next to N1
+ * Reverse linkages by set N2.Next to N1
  * Move all 3 pointers forward till list end
  */
 public class ReverseLinkedList {

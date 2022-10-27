@@ -7,6 +7,10 @@ public class LinkedList {
     private ListNode head;
     private int length;
 
+    public LinkedList(int[] values) {
+        Arrays.stream(values).forEach(this::append);
+    }
+
     public ListNode head() {
         return head;
     }
@@ -40,10 +44,6 @@ public class LinkedList {
         }
 
         return head;
-    }
-
-    public LinkedList(int[] values) {
-        Arrays.stream(values).forEach(this::append);
     }
 
     public void print() {
