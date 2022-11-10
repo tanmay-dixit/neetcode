@@ -15,13 +15,17 @@ public class Node {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
 
         Node node = (Node) o;
 
-        if (value != node.value) return false;
-        if (!Objects.equals(right, node.right)) return false;
+        if (value != node.value)
+            return false;
+        if (!Objects.equals(right, node.right))
+            return false;
         return Objects.equals(left, node.left);
     }
 
@@ -33,7 +37,7 @@ public class Node {
         return result;
     }
 
-    public int getValue() {
+    public int value() {
         return value;
     }
 
@@ -41,7 +45,7 @@ public class Node {
         this.value = value;
     }
 
-    public Node getRight() {
+    public Node right() {
         return right;
     }
 
@@ -49,11 +53,20 @@ public class Node {
         this.right = right;
     }
 
-    public Node getLeft() {
+    public Node left() {
         return left;
     }
 
     public void setLeft(Node left) {
         this.left = left;
     }
+
+    public boolean hasLeft() {
+        return left != null;
+    }
+
+    public boolean hasRight() {
+        return right != null;
+    }
+
 }
